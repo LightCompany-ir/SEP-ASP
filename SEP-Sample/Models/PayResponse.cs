@@ -71,5 +71,48 @@
 
             return rslt;
         }
+        public string GetStateMessage()
+        {
+            string rslt = string.Empty;
+
+            switch (State)
+            {
+                case "CanceledByUser":
+                    rslt = " کاربر انصراف داده است ";
+                    break;
+                case "OK":
+                    rslt = " پرداخت با موفقیت انجام شد ";
+                    break;
+                case "Failed":
+                    rslt = " پرداخت انجام نشد ";
+                    break;
+                case "SessionIsNull":
+                    rslt = " کاربر در بازه زمانی تعیین شده پاسخی ارسال نکرده است ";
+                    break;
+                case "InvalidParameters":
+                    rslt = " پارامتر های ارسالی نامعتبر است ";
+                    break;
+                case "MerchantIpAddressIsInvalid":
+                    rslt = " آدرس سرور پذیرنده نامعتبر است ";
+                    break;
+                case "TokenNotFound":
+                    rslt = " توکن ارسال شده یافت نشد ";
+                    break;
+                case "TokenRequired":
+                    rslt = "توکن ارسال نشد";
+                    break;
+                case "TerminalNotFound":
+                    rslt = " شماره ترمینال یافت نشد ";
+                    break;
+                case "MultisettlePolicyErrors":
+                    rslt = " محدودیت های چند حسابی رعایت نشد ";
+                    break;
+                default:
+                    rslt = "ارور نامشخص";
+                    break;
+            }
+
+            return rslt;
+        }
     }
 }
