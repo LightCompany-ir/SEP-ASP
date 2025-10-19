@@ -17,8 +17,14 @@
     </li>
     <li>Get Pay Response</li>
     <li>Check RefNum ( Disable Double Spending )</li>
-    <li>Verify Transaction Request</li>
-    <li>Verify Transaction Response</li>
-    <li></li>
-    <li></li>
+    <li>Verify Transaction Request POST : https://sep.shaparak.ir/verifyTxnRandomSessionkey/ipg/VerifyTransaction </li>
+    <li>
+        Verify Transaction Response
+        <ul>
+            <li>Success : Response = Amount</li>
+            <li>Error   : Response < 0 </li>
+            <li>Error   : Response != Amount</li>
+        </ul>
+    </li>
+    <li>Reverse if Need POST https://sep.shaparak.ir/verifyTxnRandomSessionkey/ipg/ReverseTransaction</li>
 </ol>
